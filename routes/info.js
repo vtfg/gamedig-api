@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-router.get("/", (req, res) => {
+router.get("/", async (req, res) => {
     const Gamedig = require("gamedig");
 
     const game = req.query.game;
@@ -9,7 +9,7 @@ router.get("/", (req, res) => {
     const port = req.query.port;
     var response;
 
-    Gamedig.query({
+    await Gamedig.query({
         type: game,
         host: ip,
         port: port,
@@ -23,11 +23,9 @@ router.get("/", (req, res) => {
             });
         });
 
-    setTimeout(() => {
-        res.send({
-            info: response,
-        });
-    }, 2000);
+    res.send({
+        info: response,
+    });
 });
 
 module.exports = router;
