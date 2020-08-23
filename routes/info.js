@@ -19,7 +19,7 @@ router.get("/", async (req, res) => {
         })
         .catch((error) => {
             res.status(404).send({
-                error: "Server is offline",
+                error: error,
             });
         });
 
