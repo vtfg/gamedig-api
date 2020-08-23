@@ -1,13 +1,9 @@
 const express = require("express");
 const app = express();
+const morgan = require("morgan");
 const info = require("./routes/info");
 
+app.use(morgan("dev"));
 app.use("/info", info);
-
-app.use("/", (req, res, next) => {
-    res.status(200).send({
-        mensagem: "Tudo funcionando",
-    });
-});
 
 module.exports = app;

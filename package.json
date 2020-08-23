@@ -1,5 +1,5 @@
 {
-    "name": "source-server-api",
+    "name": "game-server-info",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
@@ -12,6 +12,7 @@
     "license": "ISC",
     "dependencies": {
         "express": "^4.17.1",
-        "source-server-query": "^1.0.1"
+        "gamedig": "^2.0.22",
+        "morgan": "^1.10.0"
     }
 }
