@@ -6,13 +6,12 @@ const info = require("./routes/info");
 app.use(morgan("dev"));
 app.use("/info", info);
 
-app.use((next) => {
+app.use(() => {
     const error = new Error("There's an error");
     error.status = 404;
-    next(error);
 });
 
-app.use((error, res, next) => {
+app.use((error, res) => {
     res.status(error.status || 500);
 
     return res.send({
