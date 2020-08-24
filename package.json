@@ -14,6 +14,7 @@
         "express": "^4.17.1",
         "gamedig": "^2.0.22",
         "morgan": "^1.10.0",
-        "nodemon": "^2.0.4"
+        "nodemon": "^2.0.4",
+        "serve-favicon": "^2.5.0"
     }
 }

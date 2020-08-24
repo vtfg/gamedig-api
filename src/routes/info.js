@@ -17,11 +17,9 @@ router.get("/", async (req, res) => {
         .then((state) => {
             response = state;
         })
-        .catch((error) => {
-            res.status(404).send({
-                error: error,
-            });
-        });
+        .catch(
+            (response = "Promise rejected, probrably you used wrong params")
+        );
 
     res.send({
         info: response,

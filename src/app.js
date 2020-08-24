@@ -1,9 +1,12 @@
 const express = require("express");
 const app = express();
 const morgan = require("morgan");
-const info = require("./routes/info");
+var favicon = require("serve-favicon");
 
+app.use(favicon("public/favicon.ico"));
 app.use(morgan("dev"));
+
+const info = require("./routes/info");
 app.use("/info", info);
 
 app.use(() => {
