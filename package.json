@@ -1,15 +1,15 @@
 {
     "name": "gamedig-api",
+    "author": "vitogd",
     "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
+    "description": "  Get information about your favorite server without enter ingame",
+    "license": "MIT",
+    "main": "src/server.js",
     "scripts": {
-        "start": "node server.js",
-        "start:dev": "nodemon server.js"
+        "start": "node src/server.js",
+        "start:dev": "nodemon src/server.js"
     },
     "keywords": [],
-    "author": "vitogd",
-    "license": "MIT",
     "dependencies": {
         "express": "^4.17.1",
         "gamedig": "^2.0.22",
